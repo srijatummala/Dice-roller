@@ -1,2 +1,22 @@
 # Dice-roller
-created a dice roller game using python
+import random 
+
+def roll_dice():
+    return random.randint(1, 6)  
+
+def dice_roller():
+    print(" Welcome to the Dice Roller!")
+    while True:
+        user_input = input("\nPress 'r' to roll the dice or 'q' to quit: ").lower()
+        if user_input == 'r':
+            result = roll_dice()
+            print(f" You rolled: {result}")
+        elif user_input == 'q':
+            print(" Thanks for playing")
+            break
+        else:
+            print(" Invalid input")
+
+dice_roller()
+
+
